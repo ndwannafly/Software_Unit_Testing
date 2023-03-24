@@ -16,7 +16,6 @@ public class DomainTest {
     private static Day today;
     @BeforeEach
     void setUp(){
-
         today = new Day(Weekday.THURSDAY);
         galaxy = new Galaxy();
     }
@@ -34,6 +33,13 @@ public class DomainTest {
         ObjectInSpace obj = new ObjectInSpace();
         obj.floatToTheSun();
         assertEquals("to the sun", obj.getDirection().getDestination());
+    }
+
+    @Test
+    @DisplayName("test change object location")
+    void testSetLocation(){
+        ObjectInSpace obj = new ObjectInSpace();
+        obj.setLocation("To the Moon");
     }
 
     @Test

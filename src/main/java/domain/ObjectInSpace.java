@@ -50,6 +50,12 @@ public class ObjectInSpace {
         this.location = location;
     }
 
+    public void setLocation(String location){
+        if (this.location == null){
+            this.location = new Location(location);
+        } else this.location.setName(location);
+    }
+
     public void setDirection(Direction direction) {
         this.direction = direction;
     }

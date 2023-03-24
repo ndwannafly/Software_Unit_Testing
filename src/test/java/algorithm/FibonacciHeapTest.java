@@ -1,11 +1,27 @@
 package algorithm;
 
+import domain.Day;
+import domain.Galaxy;
+import domain.Weekday;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FibonacciHeapTest {
+    FibonacciHeap fibonacciHeap;
+    @BeforeEach
+    void setUp(){
+        fibonacciHeap = new FibonacciHeap();
+    }
+
     @Test
-    public void testInsertAndPeek() {
+    public void testInsert(){
+        fibonacciHeap.insert(5);
+        assertFalse(fibonacciHeap.empty());
+    }
+
+    @Test
+    public void testPeek() {
         FibonacciHeap fibonacciHeap = new FibonacciHeap();
         fibonacciHeap.insert(5);
         fibonacciHeap.insert(3);
